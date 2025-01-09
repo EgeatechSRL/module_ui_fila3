@@ -29,6 +29,7 @@ return [
         'dedent' => 'Riduci rientro',
         'remove' => 'Rimuovi',
         'sorted' => 'Ordinato',
+        'delete' => 'Elimina elemento',
     ],
 
     'items-modal' => [
