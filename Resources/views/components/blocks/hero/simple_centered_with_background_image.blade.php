@@ -4,7 +4,7 @@
     <div class="video-container">
         <video autoplay muted loop>
             <source src="/storage/{{ $background }}" type="video/mp4">
-            <img src="url('/storage/home-bg2.png')"/>
+            <img src="/storage/blocks/home-bg2.png"/>
         </video>
     </div>
     <div class="ml-16 max-w-4xl title-box-padding">
