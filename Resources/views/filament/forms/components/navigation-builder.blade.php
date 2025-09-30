@@ -19,9 +19,12 @@
 >
     <div wire:key="navigation-items-wrapper">
         <div
-            class="space-y-2"
+            @class([
+                'w-full rounded-lg border ',
+                $disableRecordEdit ? 'border-gray-500' : 'bg-white border-gray-300',
+            ])
             x-data="navigationSortableContainer({
-                statePath: @js($getStatePath())
+                statePath: @js($getStatePath()) 
             })"
             data-sortable-container
         >
@@ -34,11 +37,13 @@
                     :$disableRecordEdit
                     :$disableRecordDeletion
                     :$disableRecordsSorting
+                    :isLast="$loop->last"
                 />
             @empty
                 <div @class([
-                    'w-full bg-white rounded-lg border border-gray-300 px-3 py-2 text-left',
-                    'dark:bg-gray-700 dark:border-gray-600',
+                    'w-full text-left dark:bg-gray-700 dark:border-gray-600 px-3 py-2',
+                    // 'w-full bg-white rounded-lg border border-gray-300 px-3 py-2 text-left',
+                    // 'dark:bg-gray-700 dark:border-gray-600',
                 ])>
                     {{ __('ui::filament-navigation.items.empty') }}
                 </div>

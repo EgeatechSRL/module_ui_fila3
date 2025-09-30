@@ -8,7 +8,7 @@ return [
         'url' => 'URL',
         'target' => 'Apri in',
         'name' => 'Nome',
-        'items' => 'Voci di menù',
+        'items' => 'Elementi',
         'handle' => 'Riferimento',
         'created_at' => 'Data di creazione',
         'updated_at' => 'Data di aggiornamento',
@@ -20,9 +20,9 @@ return [
     ],
 
     'items' => [
-        'empty' => 'Nessuna voce di menù.',
-        'add-item' => 'Aggiungi voce di menù',
-        'add-child' => 'Aggiungi sotto-voce di menù',
+        'empty' => 'Nessun elemento presente.',
+        'add-item' => 'Aggiungi elemento',
+        'add-child' => 'Aggiungi figlio',
         'move-up' => 'Sposta su',
         'move-down' => 'Sposta giù',
         'indent' => 'Aumenta rientro',
@@ -33,7 +33,7 @@ return [
     ],
 
     'items-modal' => [
-        'title' => 'Voce di menù',
+        'title' => 'Elemento',
         'label' => 'Etichetta',
         'type' => 'Tipo',
         'btn' => 'Salva',
