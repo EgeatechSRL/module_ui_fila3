@@ -86,7 +86,7 @@
         @endif
         
         @if (!$isLast)
-            <hr  style="margin-left : .75rem"/>
+            <hr style="margin-left : .75rem"/>
         @endif
     </div>
 
@@ -94,6 +94,9 @@
         <div wire:key="{{ $statePath }}-children" x-data="navigationSortableContainer({
             statePath: @js($statePath . '.children')
         })">
+            @if ($isLast)
+                <hr style="margin-left : .75rem"/>
+            @endif
             @foreach ($item['children'] as $uuid => $child)
                 <x-ui::nav-item 
                     :statePath="$statePath . '.children.' . $uuid" 
@@ -101,8 +104,13 @@
                     :$disableNewChildRecordCreation 
                     :$disableRecordEdit
                     :$disableRecordDeletion 
-                    :$disableRecordsSorting />
+                    :$disableRecordsSorting
+                    :isLast="$loop->last"
+                     />
             @endforeach
+            @if (!$isLast)
+                <hr style="margin-left : .75rem"/>
+            @endif
         </div>
     </div>
 </div>
